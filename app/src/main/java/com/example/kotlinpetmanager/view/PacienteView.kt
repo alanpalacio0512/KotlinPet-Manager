@@ -13,6 +13,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.kotlinpetmanager.model.Paciente
 import com.example.kotlinpetmanager.viewmodel.PacienteViewModel
+import androidx.compose.foundation.shape.RoundedCornerShape
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -219,7 +221,9 @@ fun PacienteCard(
 ) {
 
     ElevatedCard(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(20.dp),
+        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 3.dp)
     ) {
 
         Column(
